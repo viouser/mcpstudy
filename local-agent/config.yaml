@@ -1,0 +1,44 @@
+model:
+  provider: ollama
+  name: llama3.1:8b
+  temperature: 0
+
+agent:
+  require_confirmation_for_writes: true
+  use_mcp: true
+  use_native_tools: true
+debug:
+  enabled: true
+  log_to_file: true
+  log_path: logs/agent_debug.log
+  log_llm_requests: true
+  log_llm_responses: true
+  log_tool_routing: true
+  log_tool_results: true
+  log_mcp_startup: true
+  log_mcp_tools: true
+  log_mcp_errors: true
+
+mcp_servers:
+  special_tasks:
+    enabled: true
+    command: python
+    args:
+      - servers/special_tasks_server.py
+    transport: stdio
+
+  vsphere:
+    enabled: true
+    command: python
+    args:
+      - servers/vsphere_server.py
+    transport: stdio
+
+  filesystem:
+    enabled: true
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-filesystem"
+      - "C:/Users/vious/Documents/agent-workspace"
+    transport: stdio

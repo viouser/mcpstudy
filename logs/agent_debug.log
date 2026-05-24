@@ -1,0 +1,2583 @@
+{
+  "timestamp": "2026-05-17T09:56:20",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "native_tools": [
+      "add_numbers",
+      "estimate_vm_memory"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "chat_request",
+  "data": {
+    "user_input": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "tool_selection_request",
+  "data": {
+    "user_input": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "deterministic_route_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "tool_decision",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "tool_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    },
+    "result": {
+      "raw_gb": 192.0,
+      "overhead_gb": 38.4,
+      "total_gb": 230.4
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:01",
+  "label": "llm_request",
+  "data": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "\nYou are a local chat agent.\n\nRules:\n- Be practical and concise.\n- Use provided tool results when available.\n- Do not invent tool results.\n- Ask for confirmation before destructive or write operations.\n- Prefer read-only inspection first.\n- Do not mention internal routing unless it helps the user.\n"
+      },
+      {
+        "role": "user",
+        "content": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+      },
+      {
+        "role": "tool",
+        "content": "{'tool': 'estimate_vm_memory', 'arguments': {'vm_count': 12, 'memory_per_vm_gb': 16.0, 'overhead_percent': 20.0}, 'result': {'raw_gb': 192.0, 'overhead_gb': 38.4, 'total_gb': 230.4}}"
+      },
+      {
+        "role": "user",
+        "content": "Use the tool result above to answer my original question. Do not mention internal routing unless needed."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:29",
+  "label": "llm_response",
+  "data": {
+    "content": "Based on the tool result, the estimated memory for 12 VMs with 16 GB each and 20% overhead is approximately 230.4 GB."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T09:57:29",
+  "label": "final_answer",
+  "data": "Based on the tool result, the estimated memory for 12 VMs with 16 GB each and 20% overhead is approximately 230.4 GB."
+}
+
+{
+  "timestamp": "2026-05-17T10:53:02",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "native_tools": [
+      "add_numbers",
+      "estimate_vm_memory"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "chat_request",
+  "data": {
+    "user_input": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "tool_selection_request",
+  "data": {
+    "user_input": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "deterministic_route_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "tool_decision",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "tool_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    },
+    "result": {
+      "raw_gb": 192.0,
+      "overhead_gb": 38.4,
+      "total_gb": 230.4
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:25",
+  "label": "llm_request",
+  "data": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "\nYou are a local chat agent.\n\nRules:\n- Be practical and concise.\n- Use provided tool results when available.\n- Do not invent tool results.\n- Ask for confirmation before destructive or write operations.\n- Prefer read-only inspection first.\n- Do not mention internal routing unless it helps the user.\n"
+      },
+      {
+        "role": "user",
+        "content": " Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+      },
+      {
+        "role": "tool",
+        "content": "{'tool': 'estimate_vm_memory', 'arguments': {'vm_count': 12, 'memory_per_vm_gb': 16.0, 'overhead_percent': 20.0}, 'result': {'raw_gb': 192.0, 'overhead_gb': 38.4, 'total_gb': 230.4}}"
+      },
+      {
+        "role": "user",
+        "content": "Use the tool result above to answer my original question. Mention internal routing unless not needed."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:54",
+  "label": "llm_response",
+  "data": {
+    "content": "The total memory required for 12 VMs with 16 GB each and 20% overhead would be approximately **230.4 GB**.\n\nInternal routing is not necessary in this case, so I won't mention it."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:53:54",
+  "label": "final_answer",
+  "data": "The total memory required for 12 VMs with 16 GB each and 20% overhead would be approximately **230.4 GB**.\n\nInternal routing is not necessary in this case, so I won't mention it."
+}
+
+{
+  "timestamp": "2026-05-17T10:54:40",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "native_tools": [
+      "add_numbers",
+      "estimate_vm_memory"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "chat_request",
+  "data": {
+    "user_input": "Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "tool_selection_request",
+  "data": {
+    "user_input": "Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "deterministic_route_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "tool_decision",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "tool_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    },
+    "result": {
+      "raw_gb": 192.0,
+      "overhead_gb": 38.4,
+      "total_gb": 230.4
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:54:57",
+  "label": "llm_request",
+  "data": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "\nYou are a local chat agent.\n\nRules:\n- Be practical and concise.\n- Use provided tool results when available.\n- Do not invent tool results.\n- Ask for confirmation before destructive or write operations.\n- Prefer read-only inspection first.\n- Do not mention internal routing unless it helps the user.\n"
+      },
+      {
+        "role": "user",
+        "content": "Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+      },
+      {
+        "role": "tool",
+        "content": "{'tool': 'estimate_vm_memory', 'arguments': {'vm_count': 12, 'memory_per_vm_gb': 16.0, 'overhead_percent': 20.0}, 'result': {'raw_gb': 192.0, 'overhead_gb': 38.4, 'total_gb': 230.4}}"
+      },
+      {
+        "role": "user",
+        "content": "Use the tool result above to answer my original question. Mention internal routing "
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:55:19",
+  "label": "llm_response",
+  "data": {
+    "content": "To estimate memory for 12 VMs with 16 GB each and 20% overhead, we can use the provided tool result.\n\nAccording to the result, the total estimated memory required would be `230.4` GB.\n\nNote that this is an internal calculation and does not involve any actual routing of data, but rather a mathematical computation based on the provided parameters."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T10:55:19",
+  "label": "final_answer",
+  "data": "To estimate memory for 12 VMs with 16 GB each and 20% overhead, we can use the provided tool result.\n\nAccording to the result, the total estimated memory required would be `230.4` GB.\n\nNote that this is an internal calculation and does not involve any actual routing of data, but rather a mathematical computation based on the provided parameters."
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "chat_request",
+  "data": {
+    "user_input": "Estimate memory for 12 VMs with 16 MB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "tool_selection_request",
+  "data": {
+    "user_input": "Estimate memory for 12 VMs with 16 MB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "deterministic_route_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "tool_decision",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "tool_result",
+  "data": {
+    "tool": "estimate_vm_memory",
+    "arguments": {
+      "vm_count": 12,
+      "memory_per_vm_gb": 16.0,
+      "overhead_percent": 20.0
+    },
+    "result": {
+      "raw_gb": 192.0,
+      "overhead_gb": 38.4,
+      "total_gb": 230.4
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:13:12",
+  "label": "llm_request",
+  "data": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "\nYou are a local chat agent.\n\nRules:\n- Be practical and concise.\n- Use provided tool results when available.\n- Do not invent tool results.\n- Ask for confirmation before destructive or write operations.\n- Prefer read-only inspection first.\n- Do not mention internal routing unless it helps the user.\n"
+      },
+      {
+        "role": "user",
+        "content": "Estimate memory for 12 VMs with 16 GB each and 20% overhead"
+      },
+      {
+        "role": "assistant",
+        "content": "To estimate memory for 12 VMs with 16 GB each and 20% overhead, we can use the provided tool result.\n\nAccording to the result, the total estimated memory required would be `230.4` GB.\n\nNote that this is an internal calculation and does not involve any actual routing of data, but rather a mathematical computation based on the provided parameters."
+      },
+      {
+        "role": "user",
+        "content": "Estimate memory for 12 VMs with 16 MB each and 20% overhead"
+      },
+      {
+        "role": "tool",
+        "content": "{'tool': 'estimate_vm_memory', 'arguments': {'vm_count': 12, 'memory_per_vm_gb': 16.0, 'overhead_percent': 20.0}, 'result': {'raw_gb': 192.0, 'overhead_gb': 38.4, 'total_gb': 230.4}}"
+      },
+      {
+        "role": "user",
+        "content": "Use the tool result above to answer my original question. Mention internal routing "
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:14:09",
+  "label": "llm_response",
+  "data": {
+    "content": "According to the provided tool result:\n\n`memory_per_vm_gb`: 16 MB is not a valid value as per the tool's result which expects memory in GB, not MB.\n\nHowever, if you meant `16 GB` as stated earlier, we can use the tool result to estimate the total memory required. \n\nThe estimated total memory required for 12 VMs with 16 GB each and 20% overhead is `230.4` GB. This calculation involves an internal routing of data through the estimation process.\n\nHowever, if you meant `16 MB`, then we cannot proceed with the calculation as it's not a valid input for this tool."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T14:14:09",
+  "label": "final_answer",
+  "data": "According to the provided tool result:\n\n`memory_per_vm_gb`: 16 MB is not a valid value as per the tool's result which expects memory in GB, not MB.\n\nHowever, if you meant `16 GB` as stated earlier, we can use the tool result to estimate the total memory required. \n\nThe estimated total memory required for 12 VMs with 16 GB each and 20% overhead is `230.4` GB. This calculation involves an internal routing of data through the estimation process.\n\nHowever, if you meant `16 MB`, then we cannot proceed with the calculation as it's not a valid input for this tool."
+}
+
+{
+  "timestamp": "2026-05-17T15:32:53",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:32:53",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:33:59",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:33:59",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:33:59",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:33:59",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:34:00",
+  "label": "mcp_load_error",
+  "data": {
+    "error_type": "ExceptionGroup",
+    "error": "unhandled errors in a TaskGroup (1 sub-exception)",
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:34:00",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:34:00",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:28",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:28",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:28",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:28",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:31",
+  "label": "mcp_tools_loaded",
+  "data": {
+    "tool_count": 19,
+    "tools": [
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:31",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:35:31",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:22",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:22",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:22",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:22",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:24",
+  "label": "mcp_tools_loaded",
+  "data": {
+    "tool_count": 19,
+    "tools": [
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:24",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:24",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:42",
+  "label": "chat_started",
+  "data": {
+    "user_input": ""
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:36:42",
+  "label": "agent_invoke_request",
+  "data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": ""
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:31",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:31",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:31",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:31",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:35",
+  "label": "mcp_tools_loaded",
+  "data": {
+    "tool_count": 19,
+    "tools": [
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:35",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:37:36",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:22",
+  "label": "agent_invoke_response",
+  "data": {
+    "result": {
+      "messages": [
+        "content='' additional_kwargs={} response_metadata={} id='c5b30db2-d8b1-4aba-b57c-b439bf1b2c5f'",
+        "content='It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' additional_kwargs={} response_metadata={'model': 'llama3.1:8b', 'created_at': '2026-05-17T19:43:22.8389863Z', 'done': True, 'done_reason': 'stop', 'total_duration': 400302516900, 'load_duration': 8878725400, 'prompt_eval_count': 1924, 'prompt_eval_duration': 369519375600, 'eval_count': 59, 'eval_duration': 21782311800, 'logprobs': None, 'model_name': 'llama3.1:8b', 'model_provider': 'ollama'} id='lc_run--019e3770-d716-7552-8c48-11938cd1ac9e-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 1924, 'output_tokens': 59, 'total_tokens': 1983}"
+      ]
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:22",
+  "label": "chat_completed",
+  "data": {
+    "final_answer": "It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:22",
+  "label": "chat_started",
+  "data": {
+    "user_input": ""
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:22",
+  "label": "agent_invoke_request",
+  "data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": ""
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:44",
+  "label": "agent_invoke_response",
+  "data": {
+    "result": {
+      "messages": [
+        "content='' additional_kwargs={} response_metadata={} id='dcccf6fa-f408-4809-a527-836fedd60b45'",
+        "content='It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' additional_kwargs={} response_metadata={'model': 'llama3.1:8b', 'created_at': '2026-05-17T19:43:44.6495325Z', 'done': True, 'done_reason': 'stop', 'total_duration': 21628438300, 'load_duration': 270607800, 'prompt_eval_count': 1924, 'prompt_eval_duration': 391217100, 'eval_count': 59, 'eval_duration': 20671860200, 'logprobs': None, 'model_name': 'llama3.1:8b', 'model_provider': 'ollama'} id='lc_run--019e3776-f369-7293-a840-39351f14337d-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 1924, 'output_tokens': 59, 'total_tokens': 1983}"
+      ]
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:44",
+  "label": "chat_completed",
+  "data": {
+    "final_answer": "It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:44",
+  "label": "chat_started",
+  "data": {
+    "user_input": ""
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:43:44",
+  "label": "agent_invoke_request",
+  "data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": ""
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:05",
+  "label": "agent_invoke_response",
+  "data": {
+    "result": {
+      "messages": [
+        "content='' additional_kwargs={} response_metadata={} id='b9a9aba8-9b80-40d5-a8a9-4b597fc5fb6a'",
+        "content='It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' additional_kwargs={} response_metadata={'model': 'llama3.1:8b', 'created_at': '2026-05-17T19:44:05.9874616Z', 'done': True, 'done_reason': 'stop', 'total_duration': 21317937400, 'load_duration': 232076600, 'prompt_eval_count': 1924, 'prompt_eval_duration': 330016800, 'eval_count': 59, 'eval_duration': 20657083200, 'logprobs': None, 'model_name': 'llama3.1:8b', 'model_provider': 'ollama'} id='lc_run--019e3777-4819-7c50-a9ec-4f572b44c6b7-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 1924, 'output_tokens': 59, 'total_tokens': 1983}"
+      ]
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:05",
+  "label": "chat_completed",
+  "data": {
+    "final_answer": "It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}."
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:05",
+  "label": "chat_started",
+  "data": {
+    "user_input": ""
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:05",
+  "label": "agent_invoke_request",
+  "data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": ""
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:27",
+  "label": "agent_invoke_response",
+  "data": {
+    "result": {
+      "messages": [
+        "content='' additional_kwargs={} response_metadata={} id='9c96c826-6456-4033-888c-9034d803d2ab'",
+        "content='It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' additional_kwargs={} response_metadata={'model': 'llama3.1:8b', 'created_at': '2026-05-17T19:44:27.4993331Z', 'done': True, 'done_reason': 'stop', 'total_duration': 21497366000, 'load_duration': 235396100, 'prompt_eval_count': 1924, 'prompt_eval_duration': 347046100, 'eval_count': 59, 'eval_duration': 20807109200, 'logprobs': None, 'model_name': 'llama3.1:8b', 'model_provider': 'ollama'} id='lc_run--019e3777-9b6e-7cb3-b096-fbfe09efe9bf-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 1924, 'output_tokens': 59, 'total_tokens': 1983}"
+      ]
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-17T15:44:27",
+  "label": "chat_completed",
+  "data": {
+    "final_answer": "It seems like you forgot to ask a question. Please provide the prompt for which you would like me to find a function call with its proper arguments that best answers it, and I will respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}."
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:08",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:08",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:08",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:08",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:13",
+  "label": "mcp_tools_loaded",
+  "data": {
+    "tool_count": 19,
+    "tools": [
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:13",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-21T06:53:14",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:20",
+  "label": "app_startup_config",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "use_native_tools": true,
+    "use_mcp": true
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:20",
+  "label": "native_tools_loaded",
+  "data": {
+    "tool_count": 2,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:20",
+  "label": "mcp_enabled_servers",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ],
+    "server_configs": {
+      "special_tasks": {
+        "command": "python",
+        "args": [
+          "servers/special_tasks_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "vsphere": {
+        "command": "python",
+        "args": [
+          "servers/vsphere_server.py"
+        ],
+        "transport": "stdio"
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "C:/Users/vious/Documents/agent-workspace"
+        ],
+        "transport": "stdio"
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:20",
+  "label": "mcp_client_created",
+  "data": {
+    "server_count": 3,
+    "servers": [
+      "special_tasks",
+      "vsphere",
+      "filesystem"
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:24",
+  "label": "mcp_tools_loaded",
+  "data": {
+    "tool_count": 19,
+    "tools": [
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:25",
+  "label": "all_tools_ready",
+  "data": {
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T07:30:25",
+  "label": "agent_initialized",
+  "data": {
+    "model_name": "llama3.1:8b",
+    "temperature": 0,
+    "tool_count": 21,
+    "tools": [
+      {
+        "name": "add_numbers",
+        "description": "Add two numbers together."
+      },
+      {
+        "name": "estimate_vm_memory",
+        "description": "Estimate total VM memory capacity with overhead."
+      },
+      {
+        "name": "summarize_log",
+        "description": "Summarize a log file and identify likely errors."
+      },
+      {
+        "name": "calculate_vm_memory",
+        "description": "Estimate total memory required for a number of VMs."
+      },
+      {
+        "name": "estimate_gpu_vram_capacity",
+        "description": "Estimate usable GPU VRAM capacity for local AI workloads."
+      },
+      {
+        "name": "estimate_cluster_memory_capacity",
+        "description": "Estimate usable vSphere cluster memory after HA or operational reserve."
+      },
+      {
+        "name": "estimate_gpu_cluster_vram",
+        "description": "Estimate usable GPU VRAM after reserving capacity for fragmentation."
+      },
+      {
+        "name": "read_file",
+        "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+      },
+      {
+        "name": "read_text_file",
+        "description": "Read the complete contents of a file from the file system as text. Handles various text encodings and provides detailed error messages if the file cannot be read. Use this tool when you need to examine the contents of a single file. Use the 'head' parameter to read only the first N lines of a file, or the 'tail' parameter to read only the last N lines of a file. Operates on the file as text regardless of extension. Only works within allowed directories."
+      },
+      {
+        "name": "read_media_file",
+        "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowed directories."
+      },
+      {
+        "name": "read_multiple_files",
+        "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by one when you need to analyze or compare multiple files. Each file's content is returned with its path as a reference. Failed reads for individual files won't stop the entire operation. Only works within allowed directories."
+      },
+      {
+        "name": "write_file",
+        "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it will overwrite existing files without warning. Handles text content with proper encoding. Only works within allowed directories."
+      },
+      {
+        "name": "edit_file",
+        "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Returns a git-style diff showing the changes made. Only works within allowed directories."
+      },
+      {
+        "name": "create_directory",
+        "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one operation. If the directory already exists, this operation will succeed silently. Perfect for setting up directory structures for projects or ensuring required paths exist. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory",
+        "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is essential for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "list_directory_with_sizes",
+        "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results clearly distinguish between files and directories with [FILE] and [DIR] prefixes. This tool is useful for understanding directory structure and finding specific files within a directory. Only works within allowed directories."
+      },
+      {
+        "name": "directory_tree",
+        "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', 'type' (file/directory), and 'children' for directories. Files have no children array, while directories always have a children array (which may be empty). The output is formatted with 2-space indentation for readability. Only works within allowed directories."
+      },
+      {
+        "name": "move_file",
+        "description": "Move or rename files and directories. Can move files between directories and rename them in a single operation. If the destination exists, the operation will fail. Works across different directories and can be used for simple renaming within the same directory. Both source and destination must be within allowed directories."
+      },
+      {
+        "name": "search_files",
+        "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style patterns that match paths relative to the working directory. Use pattern like '*.ext' to match files in current directory, and '**/*.ext' to match files in all subdirectories. Returns full paths to all matching items. Great for finding files when you don't know their exact location. Only searches within allowed directories."
+      },
+      {
+        "name": "get_file_info",
+        "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including size, creation time, last modified time, permissions, and type. This tool is perfect for understanding file characteristics without reading the actual content. Only works within allowed directories."
+      },
+      {
+        "name": "list_allowed_directories",
+        "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these allowed directories are also accessible. Use this to understand which directories and their nested paths are available before trying to access files."
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T08:38:09",
+  "label": "chat_started",
+  "data": {
+    "user_input": "Estimate memory for 12 VMs with 16GB each and 20% overhead"
+  }
+}
+
+{
+  "timestamp": "2026-05-22T08:38:09",
+  "label": "agent_invoke_request",
+  "data": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Estimate memory for 12 VMs with 16GB each and 20% overhead"
+      }
+    ]
+  }
+}
+
+{
+  "timestamp": "2026-05-22T08:38:11",
+  "label": "agent_invoke_error",
+  "data": {
+    "error_type": "ResponseError",
+    "error": "model requires more system memory (4.8 GiB) than is available (3.5 GiB) (status code: 500)"
+  }
+}
+
